@@ -21,5 +21,7 @@ public interface ILoan {
 	
 	public int getID();
 	
+	public Date getReturnDate();
+	
 
 }

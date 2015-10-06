@@ -100,6 +100,10 @@ public class Loan implements ILoan {
 	public ELoanState getState() {
 		return state;
 	}
+	
+	public Date getReturnDate(){
+		return dueDate;
+	}
 
 	@Override
 	public String toString() {
