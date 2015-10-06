@@ -25,4 +25,28 @@ public class BookMapDAOTesting{
 		 return x;
 	
 }
+	public String printTitle(String author){
+		BookHelper helper=new BookHelper();
+		BookMapDAO dao=new BookMapDAO(helper);
+		IBook book1=dao.addBook("RECEP","PYTHON","12");
+		String title="";
+		if (book1.getAuthor().equals(author)){
+			title= book1.getTitle();
+		}
+		return title;
+}
+	
+	public boolean confirmAddBook(IBook book){
+		BookHelper helper=new BookHelper();
+		BookMapDAO dao=new BookMapDAO(helper);
+		
+		 book=dao.addBook(book.getAuthor(),book.getTitle(),book.getCallNumber());
+		
+		boolean confirm=false;
+		if(dao.listBooks().contains(book)){
+			confirm=true;
+			
+		}
+		return confirm;
+}
 }
