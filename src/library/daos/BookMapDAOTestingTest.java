@@ -17,10 +17,11 @@ public class BookMapDAOTestingTest {
 
 	System.out.println("printAuthor");
     BookMapDAOTesting instance = new BookMapDAOTesting ();
-   String expResult = "RECEP";
+   String expResult = "RECEP";//Expects to receive RECEP
    
-    String result = instance.printAuthor("12");
-    assertEquals(expResult, result);
+    String result = instance.printAuthor("12"); //Passes callnUmber as parameter
+    System.out.println(result);
+    assertEquals(expResult, result);//check whether expected result is actual result
 }
 	
 	@Test
@@ -28,26 +29,29 @@ public class BookMapDAOTestingTest {
 
 
 	System.out.println("printTitle");
-   BookMapDAOTesting instance = new BookMapDAOTesting ();
-  String expResult = "PYTHON";
-  
-   String result = instance.printTitle("RECEP");
-   assertEquals(expResult, result);
+  BookMapDAOTesting instance = new BookMapDAOTesting ();
+ String expResult = "PYTHON";//expects to receive PYTHON
+ 
+  String result = instance.printTitle("RECEP");//Passes Author as parameter
+  System.out.println(result);
+  assertEquals(expResult, result);//check whether expected result is actual result
 }
 	@Test
 	 public void testconfirmAddBook() {
 
 
 	System.out.println("confirmAddBook");
-  BookMapDAOTesting instance = new BookMapDAOTesting ();
-  IBook book=new Book("EMMANUEL","HTML","12",14);
- boolean expResult = true;
- 
-  boolean result = instance.confirmAddBook(book);
-  assertEquals(expResult, result);
+ BookMapDAOTesting instance = new BookMapDAOTesting ();
+ IBook book=new Book("EMMANUEL","HTML","12",14);
+boolean expResult = true;//Expects to receive true
+
+ boolean result = instance.confirmAddBook(book);//passess book as parameter
+ System.out.println(result);
+ assertEquals(expResult, result);//check whether expected result is actual result
 }
 	
 	
+
 	
 }
 

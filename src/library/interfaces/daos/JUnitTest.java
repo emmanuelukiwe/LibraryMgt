@@ -28,25 +28,26 @@ import library.interfaces.entities.IMember;
 	 */
 	public class JUnitTest {
 	
-	    public void mainOne(Book book){
+	    public void testReturnBook(Book book){//receives a book instance
 	  
 	        
 	        
-	        book.returnBook(true);
+	        book.returnBook(true);//call retun book method of book class
 	        
 	    }
 	    
 	    public EBookState checkNewBookState(Book book){
-	        return book.getState();
+	        return book.getState();//call get book state of book class
 	    }
 	    
 	    //Confirm that books moves from available state to on loan
-	    public void checkBorrow(Loan loan){
+	    public EBookState checkBorrow(Loan loan){
 	      IBook x=loan.getBook();
-	      System.out.println(x.getState());
+	      System.out.println("Book state before borrow :" +x.getState());
 	      x.borrow(loan);
-	      System.out.println(x.getState());
+	      System.out.println("Book state after borrow:" +x.getState());
 	      System.out.print("");
+	      return x.getState();
 	              
     }
 	    

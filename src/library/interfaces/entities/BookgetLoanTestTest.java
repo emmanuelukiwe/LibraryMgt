@@ -43,8 +43,9 @@ public class BookgetLoanTestTest {
 
 	    Loan loan = new Loan(book,member,date1,date2);
 	    BookgetLoanTest instance = new BookgetLoanTest();
-	    String expResult ="Emma" +"Thu Oct 15 00:00:00 EST 2015";
+	    String expResult ="Emma " +"Thu Oct 15 00:00:00 EST 2015";
 	    String result=instance.checkBorrow(loan);
+	    System.out.println(result);
 	    assertEquals(expResult, result);
 	    
 	}

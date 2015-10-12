@@ -17,7 +17,7 @@ public class BookgetLoanTest {
 	      x.borrow(loan);
 	     
 	      ILoan y= x.getLoan();
-	      return y.getBorrower().getFirstName() + y.getReturnDate();
+	      return y.getBorrower().getFirstName() +" "+ y.getReturnDate();
 	              
    }
 }
